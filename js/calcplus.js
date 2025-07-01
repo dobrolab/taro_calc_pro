@@ -34,7 +34,7 @@ function calculateSum() {
 		let cardnames = [];
 		cardnames[0] =	'';
 		cardnames[1] =	'Маг';
-		cardnames[2] =	'Жрица';
+		cardnames[2] =	'Верховная жрица';
 		cardnames[3] =	'Императрица';
 		cardnames[4] =	'Император';
 		cardnames[5] =	'Жрец';
@@ -206,6 +206,7 @@ function calculateSum() {
 			if (stamphealthres15) {document.getElementById('r15').classList.add('stamphealth')};
 
 		stamphealthres = stamphealthres01 + stamphealthres02 + stamphealthres03 + stamphealthres05 + stamphealthres06 + stamphealthres07 + stamphealthres08 + stamphealthres09 + stamphealthres10 + stamphealthres11 + stamphealthres12 + stamphealthres13 + stamphealthres14 + stamphealthres15;
+		if ( stamphealthres == '' ) { stamphealthres = "нет"};
 
 
 		const stamprich = [3, 10, 15];
@@ -241,6 +242,7 @@ function calculateSum() {
 			if (stamprichres15) {document.getElementById('r15').classList.add('stamprich')};
 
 		stamprichres = stamprichres01 + stamprichres02 + stamprichres03 + stamprichres04 + stamprichres05 + stamprichres06 + stamprichres07 + stamprichres08 + stamprichres09 + stamprichres10 + stamprichres11 + stamprichres12 + stamprichres13 + stamprichres14 + stamprichres15;
+		if ( stamprichres == '' ) { stamprichres = "нет"};
 
 		const stampesoteric = [2, 9, 12];
 		stampesotericres01 = stampesoteric.includes(result01) ? ' 1・' : '';
@@ -275,28 +277,29 @@ function calculateSum() {
 			if (stampesotericres15) {document.getElementById('r15').classList.add('stampesoteric')};
 
 		stampesotericres = stampesotericres01 + stampesotericres02 + stampesotericres03 + stampesotericres04 + stampesotericres05 + stampesotericres06 + stampesotericres07 + stampesotericres08 + stampesotericres09 + stampesotericres10 + stampesotericres11 + stampesotericres12 + stampesotericres13 + stampesotericres14 + stampesotericres15;
+		if ( stampesotericres == '' ) { stampesotericres = "нет"};
 
 		// ========== ПОЗИЦИИ
-		pos01 = convertToRoman(result01) + ' – ' + cardnames[01];
-		pos02 = convertToRoman(result02) + ' – ' + cardnames[02];
-		pos03 = convertToRoman(result03) + ' – ' + cardnames[03];
-		pos04 = convertToRoman(result04) + ' – ' + cardnames[04];
-		pos05 = convertToRoman(result05) + ' – ' + cardnames[05];
-		pos06 = convertToRoman(result06) + ' – ' + cardnames[06];
-		pos07 = convertToRoman(result07) + ' – ' + cardnames[07];
-		pos08 = convertToRoman(result08) + ' – ' + cardnames[08];
-		pos09 = convertToRoman(result09) + ' – ' + cardnames[09];
-		pos10 = convertToRoman(result10) + ' – ' + cardnames[10];
-		pos11 = convertToRoman(result11) + ' – ' + cardnames[11];
-		pos12 = convertToRoman(result12) + ' – ' + cardnames[12];
+		pos01 = convertToRoman(result01) + ' – ' + cardnames[result01];
+		pos02 = convertToRoman(result02) + ' – ' + cardnames[result02];
+		pos03 = convertToRoman(result03) + ' – ' + cardnames[result03];
+		pos04 = convertToRoman(result04) + ' – ' + cardnames[result04];
+		pos05 = convertToRoman(result05) + ' – ' + cardnames[result05];
+		pos06 = convertToRoman(result06) + ' – ' + cardnames[result06];
+		pos07 = convertToRoman(result07) + ' – ' + cardnames[result07];
+		pos08 = convertToRoman(result08) + ' – ' + cardnames[result08];
+		pos09 = convertToRoman(result09) + ' – ' + cardnames[result09];
+		pos10 = convertToRoman(result10) + ' – ' + cardnames[result10];
+		pos11 = convertToRoman(result11) + ' – ' + cardnames[result11];
+		pos12 = convertToRoman(result12) + ' – ' + cardnames[result12];
 
 		// ========== ЛУЧИ
-		ray01 = convertToRoman(result01) + ' – ' + cardnames[01]  + ' <br> ' + convertToRoman(result10) + ' – ' + cardnames[10];
-		ray02 = convertToRoman(result02) + ' – ' + cardnames[02]  + ' <br> ' + convertToRoman(result12) + ' – ' + cardnames[12];
-		ray03 = convertToRoman(result03) + ' – ' + cardnames[03]  + ' <br> ' + convertToRoman(result11) + ' – ' + cardnames[11];
-		ray04 = convertToRoman(result04) + ' – ' + cardnames[04]  + ' <br> ' + convertToRoman(result07) + ' – ' + cardnames[07];
-		ray05 = convertToRoman(result05) + ' – ' + cardnames[05]  + ' <br> ' + convertToRoman(result09) + ' – ' + cardnames[09];
-		ray06 = convertToRoman(result06) + ' – ' + cardnames[06]  + ' <br> ' + convertToRoman(result08) + ' – ' + cardnames[08];
+		ray01 = convertToRoman(result01) + ' – ' + cardnames[result01]  + ' <br> ' + convertToRoman(result10) + ' – ' + cardnames[result10];
+		ray02 = convertToRoman(result02) + ' – ' + cardnames[result02]  + ' <br> ' + convertToRoman(result12) + ' – ' + cardnames[result12];
+		ray03 = convertToRoman(result03) + ' – ' + cardnames[result03]  + ' <br> ' + convertToRoman(result11) + ' – ' + cardnames[result11];
+		ray04 = convertToRoman(result04) + ' – ' + cardnames[result04]  + ' <br> ' + convertToRoman(result07) + ' – ' + cardnames[result07];
+		ray05 = convertToRoman(result05) + ' – ' + cardnames[result05]  + ' <br> ' + convertToRoman(result09) + ' – ' + cardnames[result09];
+		ray06 = convertToRoman(result06) + ' – ' + cardnames[result06]  + ' <br> ' + convertToRoman(result08) + ' – ' + cardnames[result08];
 
 		// ========== Выводим результат на экран
 		document.getElementById('fr01').textContent = username;

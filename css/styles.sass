@@ -1,0 +1,336 @@
+$c0: #5F2630
+$c1: #C7AB77
+$c9: #fff
+
+.manrope 
+	font-family: "Manrope", sans-serif
+	font-optical-sizing: auto
+	font-weight: 200
+	font-style: normal
+.viaoda-libre-regular 
+	font-family: "Viaoda Libre", serif
+	font-weight: 400
+	font-style: normal
+
+body
+	background-color: $c0
+	color: $c9
+	padding-top: 76px
+	min-width: 360px
+
+	h1, h2, h3
+		color: #C7AB77
+		font-family: "Viaoda Libre", serif
+		font-weight: 400
+		text-transform: uppercase
+
+	p
+		margin-bottom: 0
+
+header
+	height: 76px
+	background-color: $c1
+	position: absolute
+	top: 0
+	width: 100%
+	display: flex
+	align-items: center
+	.h3 a
+		font-family: "Viaoda Libre", serif
+		text-decoration: none
+		color: $c0
+		font-weight: 100
+		text-transform: uppercase
+
+main
+	h1
+		margin-top: 60px
+
+.container
+	overflow-x: hidden
+
+section
+	margin-top: 60px
+	//background-color: #fff1
+
+.text-muted
+	color: #fff3 !important
+
+.text-color
+	color: $c1
+
+#dainput
+	padding-top: 60px
+	padding-bottom: 60px
+	p
+		margin-bottom: 20px
+	label
+		margin-bottom: 5px
+	select, input
+		font-size: 20px
+		padding: 15px 20px
+		background-color: #743944
+		border: 1px solid $c1
+		// border-image: linear-gradient(135deg,#f9c667 0%,#f79621 100%) 1
+		border-radius: 15px
+
+		margin-right: 15px
+		color: #fff
+	input
+		padding: 14px 20px
+		width: 100px
+
+	.calculate
+		margin-top: 20px
+		background-color: rgb(199, 171, 119)
+		background-image: linear-gradient(110deg, rgb(221, 204, 173), rgb(199, 171, 119))
+		font-size: 17px
+		padding: 16px 36px
+		border-radius: 40px
+		border: none
+		&:hover
+			background: rgb(199, 171, 119)
+			cursor: pointer
+
+#level_01
+	table.ttable
+		width: 100%
+		tr
+			border-bottom: 1px solid #C7AB7733
+		td:last-child
+			color: $c1
+			text-align: left
+			font-weight: bold
+			padding-left: 10px
+
+.astar
+	position: relative
+	display: inline-block
+	width: 700px
+	height: 800px
+	.resbg
+		opacity: .5
+	.tcard
+		position: absolute
+
+.tcard
+	transition: all .1s ease
+	border: 1px solid $c1
+	background-color: #743944
+	backdrop-filter: blur(2px)
+	padding: 5px
+	border-radius: 10px
+	width: 60px
+	height: 110px
+	display: flex
+	flex-direction: column
+	align-items: center
+	position: relative
+
+	&:hover
+		transform: scale(2)
+		z-index: 1
+
+	&.tcard_gray
+		background-color: $c1
+		color: $c0
+		.ordernumber,.romulus,.rstring
+			color: $c0
+
+	.stamph, .stampr, .stampe
+		opacity: 0.1
+		content: ""
+		width: 12px
+		height: 12px
+		right: -10px
+		display: block
+		border-radius: 10px
+		position: absolute
+		z-index: -1
+
+	.stamph
+		background-color: #1ABC9C
+		top: 10px
+	.stampr
+		background-color: #FFD700
+		top: 30px
+	.stampe
+		background-color: #B16BF7
+		top: 50px
+
+	&.stamphealth .stamph
+		opacity: 1
+	&.stamprich .stampr
+		opacity: 1
+	&.stampesoteric .stampe
+		opacity: 1
+
+	.ordernumber
+		position: absolute
+		left: 5px
+		top: 5px
+		font-size: 10px
+		color: $c1
+		line-height: 7px
+
+	.romulus
+		font-size: 15px
+		font-weight: bold
+
+	.rstring
+		font-size: 10px
+
+	.cimg
+		width: 38px
+		height: 65px
+		border-radius: 2px
+
+	&#r01
+		left: 170px
+		top: 270px
+
+	&#r02
+		left: 330px
+		top: 175px
+
+	&#r03
+		left: 490px
+		top: 270px
+
+	&#r04
+		left: 170px
+		top: 410px
+
+	&#r05
+		left: 330px
+		top: 515px
+
+	&#r06
+		left: 490px
+		top: 410px
+
+	&#r07
+		left: 15px
+		top: 510px
+
+	&#r08
+		left: 625px
+		top: 510px
+
+	&#r09
+		left: 330px
+		top: 670px
+
+	&#r10
+		left: 15px
+		top: 145px
+
+	&#r11
+		left: 625px
+		top: 145px
+
+	&#r12
+		left: 330px
+		top: 15px
+
+	&#r13
+		left: 250px
+		top: 210px
+
+	&#r14
+		left: 410px
+		top: 210px
+
+	&#r15
+		left: 330px
+		top: 340px
+
+.tcard
+	&.axisyellow
+		box-shadow: 0 0 0 5px #cccc00
+
+	&.axisgreen
+		box-shadow: 0 0 0 5px #0a8d64
+
+	&.axisblue
+		box-shadow: 0 0 0 5px #054f95
+
+	&.axisviolet
+		box-shadow: 0 0 0 5px #cb00b5
+
+.stamplabel
+	padding-left: 15px
+	position: relative
+	&::before
+		content: ""
+		display: block
+		width: 10px
+		height: 10px
+		position: absolute
+		left: 0
+		top: 8px
+		border-radius: 10px
+
+	&.stamplabelh::before
+			background-color: #1ABC9C
+	&.stamplabelr::before
+			background-color: #FFD700
+	&.stamplabele::before
+			background-color: #B16BF7
+
+
+.btn_filter
+	margin-bottom: 20px
+	color: $c1
+	input[type="checkbox"]:checked+label
+		color: #fff
+		border: none
+		border-bottom: 1px dashed #fff
+	.axis
+		color: $c1
+		border-radius: 0 !important
+		margin-right: 15px
+		border-bottom: 1px dashed transparent
+
+		&:hover
+			color: #fff
+			border-bottom: 1px dashed $c1
+	.btn-check
+		outline: none
+		border: none !important
+
+.tname
+	font-size: 18px
+	padding: 10px 15px
+	background-color: #743944
+	border: 1px solid #C7AB77
+	border-radius: 15px
+	margin-right: 5px
+	color: #fff
+
+@media (max-width: 767px)
+	#dainput select, #dainput input, .tname
+		font-size: 16px
+	.tname
+		padding: 5px 10px
+	.btn_filter .axis
+		font-size: 14px
+		margin-right: 10px
+	.mscale
+		width: 350px
+		height: 400px
+		.astar
+			transform: scale(.5)
+			top: 0
+			left: 0
+			margin: -50%
+		.akarma
+			transform: scale(.5)
+			top: 0
+			left: 0
+			margin: -50%
+		.ashadow
+			transform: scale(.5)
+			top: 0
+			left: 0
+			margin: -50%

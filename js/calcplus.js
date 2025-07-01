@@ -198,14 +198,8 @@ function calculateSum() {
 			if (stamphealthres11) {document.getElementById('r11').classList.add('stamphealth')};
 		stamphealthres12 = stamphealth.includes(result12) ? '12・' : '';
 			if (stamphealthres12) {document.getElementById('r12').classList.add('stamphealth')};
-		stamphealthres13 = stamphealth.includes(result13) ? '13・' : '';
-			if (stamphealthres13) {document.getElementById('r13').classList.add('stamphealth')};
-		stamphealthres14 = stamphealth.includes(result14) ? '14・' : '';
-			if (stamphealthres14) {document.getElementById('r14').classList.add('stamphealth')};
-		stamphealthres15 = stamphealth.includes(result15) ? '15・' : '';
-			if (stamphealthres15) {document.getElementById('r15').classList.add('stamphealth')};
 
-		stamphealthres = stamphealthres01 + stamphealthres02 + stamphealthres03 + stamphealthres05 + stamphealthres06 + stamphealthres07 + stamphealthres08 + stamphealthres09 + stamphealthres10 + stamphealthres11 + stamphealthres12 + stamphealthres13 + stamphealthres14 + stamphealthres15;
+		stamphealthres = stamphealthres01 + stamphealthres02 + stamphealthres03 + stamphealthres05 + stamphealthres06 + stamphealthres07 + stamphealthres08 + stamphealthres09 + stamphealthres10 + stamphealthres11 + stamphealthres12;
 		if ( stamphealthres == '' ) { stamphealthres = "нет"};
 
 
@@ -234,14 +228,8 @@ function calculateSum() {
 			if (stamprichres11) {document.getElementById('r11').classList.add('stamprich')};
 		stamprichres12 = stamprich.includes(result12) ? '12・' : '';
 			if (stamprichres12) {document.getElementById('r12').classList.add('stamprich')};
-		stamprichres13 = stamprich.includes(result13) ? '13・' : '';
-			if (stamprichres13) {document.getElementById('r13').classList.add('stamprich')};
-		stamprichres14 = stamprich.includes(result14) ? '14・' : '';
-			if (stamprichres14) {document.getElementById('r14').classList.add('stamprich')};
-		stamprichres15 = stamprich.includes(result15) ? '15・' : '';
-			if (stamprichres15) {document.getElementById('r15').classList.add('stamprich')};
 
-		stamprichres = stamprichres01 + stamprichres02 + stamprichres03 + stamprichres04 + stamprichres05 + stamprichres06 + stamprichres07 + stamprichres08 + stamprichres09 + stamprichres10 + stamprichres11 + stamprichres12 + stamprichres13 + stamprichres14 + stamprichres15;
+		stamprichres = stamprichres01 + stamprichres02 + stamprichres03 + stamprichres04 + stamprichres05 + stamprichres06 + stamprichres07 + stamprichres08 + stamprichres09 + stamprichres10 + stamprichres11 + stamprichres12;
 		if ( stamprichres == '' ) { stamprichres = "нет"};
 
 		const stampesoteric = [2, 9, 12];
@@ -269,14 +257,9 @@ function calculateSum() {
 			if (stampesotericres11) {document.getElementById('r11').classList.add('stampesoteric')};
 		stampesotericres12 = stampesoteric.includes(result12) ? '12・' : '';
 			if (stampesotericres12) {document.getElementById('r12').classList.add('stampesoteric')};
-		stampesotericres13 = stampesoteric.includes(result13) ? '13・' : '';
-			if (stampesotericres13) {document.getElementById('r13').classList.add('stampesoteric')};
-		stampesotericres14 = stampesoteric.includes(result14) ? '14・' : '';
-			if (stampesotericres14) {document.getElementById('r14').classList.add('stampesoteric')};
-		stampesotericres15 = stampesoteric.includes(result15) ? '15・' : '';
-			if (stampesotericres15) {document.getElementById('r15').classList.add('stampesoteric')};
 
-		stampesotericres = stampesotericres01 + stampesotericres02 + stampesotericres03 + stampesotericres04 + stampesotericres05 + stampesotericres06 + stampesotericres07 + stampesotericres08 + stampesotericres09 + stampesotericres10 + stampesotericres11 + stampesotericres12 + stampesotericres13 + stampesotericres14 + stampesotericres15;
+
+		stampesotericres = stampesotericres01 + stampesotericres02 + stampesotericres03 + stampesotericres04 + stampesotericres05 + stampesotericres06 + stampesotericres07 + stampesotericres08 + stampesotericres09 + stampesotericres10 + stampesotericres11 + stampesotericres12;
 		if ( stampesotericres == '' ) { stampesotericres = "нет"};
 
 		// ========== ПОЗИЦИИ

@@ -64,9 +64,7 @@ function calculateSum() {
 		const monthDiff = today.getMonth() - birthDate.getMonth();
 
 		// Если день рождения еще не наступил в этом году
-		if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birthDate.getDate())) {
-			age--;
-		}
+		if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birthDate.getDate())) { age--; }
 
 
 		// =========== CHOOSEN
@@ -174,92 +172,106 @@ function calculateSum() {
 
 		//  ============= ПЕЧАТИ
 		const stamphealth = [11, 13, 15];
-		stamphealthres01 = stamphealth.includes(result01) ? ' 1・' : '';
-			if (stamphealthres01) {document.getElementById('r01').classList.add('stamphealth')};
-		stamphealthres02 = stamphealth.includes(result02) ? ' 2・' : '';
-			if (stamphealthres02) {document.getElementById('r02').classList.add('stamphealth')};
-		stamphealthres03 = stamphealth.includes(result03) ? ' 3・' : '';
-			if (stamphealthres03) {document.getElementById('r03').classList.add('stamphealth')};
-//	stamphealthres04 = stamphealth.includes(result04) ? ' 4・' : '';
-//		if (stamphealthres0604{document.getElementById('r0604.classList.add('stamphealth')};
-		stamphealthres05 = stamphealth.includes(result05) ? ' 5・' : '';
-			if (stamphealthres05) {document.getElementById('r05').classList.add('stamphealth')};
-		stamphealthres06 = stamphealth.includes(result06) ? ' 6・' : '';
-			if (stamphealthres06) {document.getElementById('r06').classList.add('stamphealth')};
-		stamphealthres07 = stamphealth.includes(result07) ? ' 7・' : '';
-			if (stamphealthres07) {document.getElementById('r07').classList.add('stamphealth')};
-		stamphealthres08 = stamphealth.includes(result08) ? ' 8・' : '';
-			if (stamphealthres08) {document.getElementById('r08').classList.add('stamphealth')};
-		stamphealthres09 = stamphealth.includes(result09) ? ' 9・' : '';
-			if (stamphealthres09) {document.getElementById('r09').classList.add('stamphealth')};
-		stamphealthres10 = stamphealth.includes(result10) ? '10・' : '';
-			if (stamphealthres10) {document.getElementById('r10').classList.add('stamphealth')};
-		stamphealthres11 = stamphealth.includes(result11) ? '11・' : '';
-			if (stamphealthres11) {document.getElementById('r11').classList.add('stamphealth')};
-		stamphealthres12 = stamphealth.includes(result12) ? '12・' : '';
-			if (stamphealthres12) {document.getElementById('r12').classList.add('stamphealth')};
+		let stamphealthres = [];
+		stamphealthres[01] = stamphealth.includes(result01) ? result01 : '';
+			if (stamphealthres[01] !== '') {document.getElementById('r01').classList.add('stamphealth')};
+		stamphealthres[02] = stamphealth.includes(result02) ? result02 : '';
+			if (stamphealthres[02] !== '') {document.getElementById('r02').classList.add('stamphealth')};
+		stamphealthres[03] = stamphealth.includes(result03) ? result03 : '';
+			if (stamphealthres[03] !== '') {document.getElementById('r03').classList.add('stamphealth')};
+//		stamphealthres[04] = stamphealth.includes(result04) ? result04 : '';
+//			if (stamphealthres[04] !== '') {document.getElementById('r04').classList.add('stamphealth')};
+		stamphealthres[05] = stamphealth.includes(result05) ? result05 : '';
+			if (stamphealthres[05] !== '') {document.getElementById('r05').classList.add('stamphealth')};
+		stamphealthres[06] = stamphealth.includes(result06) ? result06 : '';
+			if (stamphealthres[06] !== '') {document.getElementById('r06').classList.add('stamphealth')};
+		stamphealthres[07] = stamphealth.includes(result07) ? result07 : '';
+			if (stamphealthres[07] !== '') {document.getElementById('r07').classList.add('stamphealth')};
+		stamphealthres[08] = stamphealth.includes(result08) ? result08 : '';
+			if (stamphealthres[08] !== '') {document.getElementById('r08').classList.add('stamphealth')};
+		stamphealthres[09] = stamphealth.includes(result09) ? result09 : '';
+			if (stamphealthres[09] !== '') {document.getElementById('r09').classList.add('stamphealth')};
+		stamphealthres[10] = stamphealth.includes(result10) ? result10 : '';
+			if (stamphealthres[10] !== '') {document.getElementById('r10').classList.add('stamphealth')};
+		stamphealthres[11] = stamphealth.includes(result11) ? result11 : '';
+			if (stamphealthres[11] !== '') {document.getElementById('r11').classList.add('stamphealth')};
+		stamphealthres[12] = stamphealth.includes(result12) ? result12 : '';
+			if (stamphealthres[12] !== '') {document.getElementById('r12').classList.add('stamphealth')};
 
-		stamphealthres = stamphealthres01 + stamphealthres02 + stamphealthres03 + stamphealthres05 + stamphealthres06 + stamphealthres07 + stamphealthres08 + stamphealthres09 + stamphealthres10 + stamphealthres11 + stamphealthres12;
+		let stamphealthresunique = '';
+		stamphealthresunique = (stamphealthres.includes(11) ? ' XI ' : '') + (stamphealthres.includes(13) ? ' XIII ' : '') + (stamphealthres.includes(15) ? ' XV ' : '');
+
+
+		stamphealthres = stamphealthres[01] + stamphealthres[02] + stamphealthres[03] + stamphealthres[05] + stamphealthres[06] + stamphealthres[07] + stamphealthres[08] + stamphealthres[09] + stamphealthres[10] + stamphealthres[11] + stamphealthres[12];
 		if ( stamphealthres == '' ) { stamphealthres = "нет"};
 
 
 		const stamprich = [3, 10, 15];
-		stamprichres01 = stamprich.includes(result01) ? ' 1・' : '';
-			if (stamprichres01) {document.getElementById('r01').classList.add('stamprich')};
-		stamprichres02 = stamprich.includes(result02) ? ' 2・' : '';
-			if (stamprichres02) {document.getElementById('r02').classList.add('stamprich')};
-		stamprichres03 = stamprich.includes(result03) ? ' 3・' : '';
-			if (stamprichres03) {document.getElementById('r03').classList.add('stamprich')};
-		stamprichres04 = stamprich.includes(result04) ? ' 4・' : '';
-			if (stamprichres04) {document.getElementById('r04').classList.add('stamprich')};
-		stamprichres05 = stamprich.includes(result05) ? ' 5・' : '';
-			if (stamprichres05) {document.getElementById('r05').classList.add('stamprich')};
-		stamprichres06 = stamprich.includes(result06) ? ' 6・' : '';
-			if (stamprichres06) {document.getElementById('r06').classList.add('stamprich')};
-		stamprichres07 = stamprich.includes(result07) ? ' 7・' : '';
-			if (stamprichres07) {document.getElementById('r07').classList.add('stamprich')};
-		stamprichres08 = stamprich.includes(result08) ? ' 8・' : '';
-			if (stamprichres08) {document.getElementById('r08').classList.add('stamprich')};
-		stamprichres09 = stamprich.includes(result09) ? ' 9・' : '';
-			if (stamprichres09) {document.getElementById('r09').classList.add('stamprich')};
-		stamprichres10 = stamprich.includes(result10) ? '10・' : '';
-			if (stamprichres10) {document.getElementById('r10').classList.add('stamprich')};
-		stamprichres11 = stamprich.includes(result11) ? '11・' : '';
-			if (stamprichres11) {document.getElementById('r11').classList.add('stamprich')};
-		stamprichres12 = stamprich.includes(result12) ? '12・' : '';
-			if (stamprichres12) {document.getElementById('r12').classList.add('stamprich')};
+		let stamprichres = [];
+		stamprichres[01] = stamprich.includes(result01) ? result01: '';
+			if (stamprichres[01] !== '') {document.getElementById('r01').classList.add('stamprich')};
+		stamprichres[02] = stamprich.includes(result02) ? result02: '';
+			if (stamprichres[02] !== '') {document.getElementById('r02').classList.add('stamprich')};
+		stamprichres[03] = stamprich.includes(result03) ? result03: '';
+			if (stamprichres[03] !== '') {document.getElementById('r03').classList.add('stamprich')};
+		stamprichres[04] = stamprich.includes(result04) ? result04: '';
+			if (stamprichres[04] !== '') {document.getElementById('r04').classList.add('stamprich')};
+		stamprichres[05] = stamprich.includes(result05) ? result05: '';
+			if (stamprichres[05] !== '') {document.getElementById('r05').classList.add('stamprich')};
+		stamprichres[06] = stamprich.includes(result06) ? result06: '';
+			if (stamprichres[06] !== '') {document.getElementById('r06').classList.add('stamprich')};
+		stamprichres[07] = stamprich.includes(result07) ? result07: '';
+			if (stamprichres[07] !== '') {document.getElementById('r07').classList.add('stamprich')};
+		stamprichres[08] = stamprich.includes(result08) ? result08: '';
+			if (stamprichres[08] !== '') {document.getElementById('r08').classList.add('stamprich')};
+		stamprichres[09] = stamprich.includes(result09) ? result09: '';
+			if (stamprichres[09] !== '') {document.getElementById('r09').classList.add('stamprich')};
+		stamprichres[10] = stamprich.includes(result10) ? result10: '';
+			if (stamprichres[10] !== '') {document.getElementById('r10').classList.add('stamprich')};
+		stamprichres[11] = stamprich.includes(result11) ? result11: '';
+			if (stamprichres[11] !== '') {document.getElementById('r11').classList.add('stamprich')};
+		stamprichres[12] = stamprich.includes(result12) ? result12: '';
+			if (stamprichres[12] !== '') {document.getElementById('r12').classList.add('stamprich')};
 
-		stamprichres = stamprichres01 + stamprichres02 + stamprichres03 + stamprichres04 + stamprichres05 + stamprichres06 + stamprichres07 + stamprichres08 + stamprichres09 + stamprichres10 + stamprichres11 + stamprichres12;
+		let stamprichresunique = '';
+		stamprichresunique = (stamprichres.includes(3) ? ' III ' : '') + (stamprichres.includes(10) ? ' X ' : '') + (stamprichres.includes(15) ? ' XV ' : '');
+
+		stamprichres = stamprichres[01] + stamprichres[02] + stamprichres[03] + stamprichres[04] + stamprichres[05] + stamprichres[06] + stamprichres[07] + stamprichres[08] + stamprichres[09] + stamprichres[10] + stamprichres[11] + stamprichres[12];
 		if ( stamprichres == '' ) { stamprichres = "нет"};
 
+
+
 		const stampesoteric = [2, 9, 12];
-		stampesotericres01 = stampesoteric.includes(result01) ? ' 1・' : '';
-			if (stampesotericres01) {document.getElementById('r01').classList.add('stampesoteric')};
-		stampesotericres02 = stampesoteric.includes(result02) ? ' 2・' : '';
-			if (stampesotericres02) {document.getElementById('r02').classList.add('stampesoteric')};
-		stampesotericres03 = stampesoteric.includes(result03) ? ' 3・' : '';
-			if (stampesotericres03) {document.getElementById('r03').classList.add('stampesoteric')};
-		stampesotericres04 = stampesoteric.includes(result04) ? ' 4・' : '';
-			if (stampesotericres04) {document.getElementById('r04').classList.add('stampesoteric')};
-		stampesotericres05 = stampesoteric.includes(result05) ? ' 5・' : '';
-			if (stampesotericres05) {document.getElementById('r05').classList.add('stampesoteric')};
-		stampesotericres06 = stampesoteric.includes(result06) ? ' 6・' : '';
-			if (stampesotericres06) {document.getElementById('r06').classList.add('stampesoteric')};
-		stampesotericres07 = stampesoteric.includes(result07) ? ' 7・' : '';
-			if (stampesotericres07) {document.getElementById('r07').classList.add('stampesoteric')};
-		stampesotericres08 = stampesoteric.includes(result08) ? ' 8・' : '';
-			if (stampesotericres08) {document.getElementById('r08').classList.add('stampesoteric')};
-		stampesotericres09 = stampesoteric.includes(result09) ? ' 9・' : '';
-			if (stampesotericres09) {document.getElementById('r09').classList.add('stampesoteric')};
-		stampesotericres10 = stampesoteric.includes(result10) ? '10・' : '';
-			if (stampesotericres10) {document.getElementById('r10').classList.add('stampesoteric')};
-		stampesotericres11 = stampesoteric.includes(result11) ? '11・' : '';
-			if (stampesotericres11) {document.getElementById('r11').classList.add('stampesoteric')};
-		stampesotericres12 = stampesoteric.includes(result12) ? '12・' : '';
-			if (stampesotericres12) {document.getElementById('r12').classList.add('stampesoteric')};
+		let stampesotericres = [];
+		stampesotericres[01] = stampesoteric.includes(result01) ? result01: '';
+			if (stampesotericres[01] !== '') {document.getElementById('r01').classList.add('stampesoteric')};
+		stampesotericres[02] = stampesoteric.includes(result02) ? result02: '';
+			if (stampesotericres[02] !== '') {document.getElementById('r02').classList.add('stampesoteric')};
+		stampesotericres[03] = stampesoteric.includes(result03) ? result03: '';
+			if (stampesotericres[03] !== '') {document.getElementById('r03').classList.add('stampesoteric')};
+		stampesotericres[04] = stampesoteric.includes(result04) ? result04: '';
+			if (stampesotericres[04] !== '') {document.getElementById('r04').classList.add('stampesoteric')};
+		stampesotericres[05] = stampesoteric.includes(result05) ? result05: '';
+			if (stampesotericres[05] !== '') {document.getElementById('r05').classList.add('stampesoteric')};
+		stampesotericres[06] = stampesoteric.includes(result06) ? result06: '';
+			if (stampesotericres[06] !== '') {document.getElementById('r06').classList.add('stampesoteric')};
+		stampesotericres[07] = stampesoteric.includes(result07) ? result07: '';
+			if (stampesotericres[07] !== '') {document.getElementById('r07').classList.add('stampesoteric')};
+		stampesotericres[08] = stampesoteric.includes(result08) ? result08: '';
+			if (stampesotericres[08] !== '') {document.getElementById('r08').classList.add('stampesoteric')};
+		stampesotericres[09] = stampesoteric.includes(result09) ? result09: '';
+			if (stampesotericres[09] !== '') {document.getElementById('r09').classList.add('stampesoteric')};
+		stampesotericres[10] = stampesoteric.includes(result10) ? result10: '';
+			if (stampesotericres[10] !== '') {document.getElementById('r10').classList.add('stampesoteric')};
+		stampesotericres[11] = stampesoteric.includes(result11) ? result11: '';
+			if (stampesotericres[11] !== '') {document.getElementById('r11').classList.add('stampesoteric')};
+		stampesotericres[12] = stampesoteric.includes(result12) ? result12: '';
+			if (stampesotericres[12] !== '') {document.getElementById('r12').classList.add('stampesoteric')};
 
+		let stampesotericresunique = '';
+		stampesotericresunique = (stampesotericres.includes(2) ? ' II ' : '') + (stampesotericres.includes(9) ? ' IX ' : '') + (stampesotericres.includes(12) ? ' XII ' : '');
 
-		stampesotericres = stampesotericres01 + stampesotericres02 + stampesotericres03 + stampesotericres04 + stampesotericres05 + stampesotericres06 + stampesotericres07 + stampesotericres08 + stampesotericres09 + stampesotericres10 + stampesotericres11 + stampesotericres12;
+		stampesotericres = stampesotericres[01] + stampesotericres[02] + stampesotericres[03] + stampesotericres[04] + stampesotericres[05] + stampesotericres[06] + stampesotericres[07] + stampesotericres[08] + stampesotericres[09] + stampesotericres[10] + stampesotericres[11] + stampesotericres[12];
 		if ( stampesotericres == '' ) { stampesotericres = "нет"};
 
 		// ========== ПОЗИЦИИ
@@ -293,9 +305,9 @@ function calculateSum() {
 		document.getElementById('fr05').textContent = rprofessia;
 		document.getElementById('fr06').textContent = rfinansy;
 
-		document.getElementById('fr08').textContent = stamphealthres;
-		document.getElementById('fr09').textContent = stamprichres;
-		document.getElementById('fr10').textContent = stampesotericres;
+		document.getElementById('fr08').textContent = stamphealthresunique;
+		document.getElementById('fr09').textContent = stamprichresunique;
+		document.getElementById('fr10').textContent = stampesotericresunique;
 
 		document.getElementById('pr01').textContent = pos01;
 		document.getElementById('pr02').textContent = pos02;
